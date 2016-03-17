@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="jquery-2.1.4.min.js"></script>
+		<script type="text/javascript">
+			$(function()
+			{
+				$('div').find('li').mouseover(function()
+				{
+					$('div').find('li').css('opacity',0.5);
+					$(this).css('opacity',1);
+					$(this).css('z-index',9999);
+				})
+				$('div').find('li').mouseout(function()
+				{
+					$('div').find('li').css('opacity',1);
+//					$(this).css('transition-timing-function','ease-in-out');
+				})
+			})
+		</script>
+		<style type="text/css">
+			body{
+				background-image: url(image/bg.jpg);
+			}
+			div{
+				
+				margin-top: 600px;
+				margin:  0 auto;
+				width: 800px;
+				height: 150px;
+				/*background: lightgreen;*/
+				/*padding: 0;*/
+				/*padding-left: 0;*/
+			}
+			div ul{
+				display: block;
+				/*filter: alpha(opacity:30);
+				opacity:0.3 ;*/
+				margin: 0 auto;
+				width: 800px;
+				height: 150px;
+				/*background: lightseagreen;*/
+				list-style: none;
+				padding: 0;
+				text-align: center;
+				margin-top:250px ;
+				position: relative;
+				padding-top: 30px;
+			}
+			li{
+				
+				position: absolute;
+				display: block;
+				float: left;
+				transition-duration:0.5s ;
+				transition-timing-function: ease;
+				border: 2px solid white;
+				border-radius: 10px;
+				padding: 0;
+			}
+			li img{
+				display: block;
+				border: 2px solid white;
+				margin: 0 auto;
+			}
+			li:hover{
+				transform: translate3d(0 -5px 0);
+				box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+				border: 10px solid white;
+				border-radius: 10px;
+				z-index:7 ;
+				/*filter: alpha(opacity:40);
+				opacity: 0.4;*/
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+		<ul>
+			<li style="margin-left: 0;margin-top: -9px;transform: rotate(355deg);opacity: 1;z-index: 69;"><img src="image/item-01.jpg"/></li>
+			<li style="margin-left: 130px;margin-top: 11px;transform: rotate(1deg);opacity: 1;z-index: 70;"><img src="image/item-02.jpg"/></li>
+			<li style="margin-left: 260px;margin-top: -7px;transform: rotate(360deg);opacity: 1;z-index: 51;"><img src="image/item-03.jpg"/></li>
+			<li style="margin-left: 390px;margin-top: 16px;transform: rotate(12deg);opacity: 1;z-index: 50;"><img src="image/item-04.jpg"/></li>
+			<li style="margin-left: 520px;margin-top: -14px;transform: rotate(357deg);opacity: 1;z-index: 49;"><img src="image/item-05.jpg"/></li>
+		</ul>
+		</div>
+	</body>
+</html>
